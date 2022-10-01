@@ -1,0 +1,32 @@
+<section class="page__question question">
+	@@include('../../components/bem-blocks/_title.html', {
+	"modif": "Залишились питання?"
+	})
+	<div class="question__container _container">
+		<!-- <div class="card"></div> -->
+
+		<div class="question__card card-form card--left">
+			<div class="card-form__thumb card-form__thumb--left">
+				<img class="animate" src="img/form.jpg" alt="cover" />
+			</div>
+			<div class="card-form__content">
+				<h2 class="card-form__title">Замовте консультацію</h2>
+
+				<form class="form-block" action="">
+					<input type="text" id="input_name" required="required" placeholder="Твоє ім'я">
+					<input type="phone" id="input_phone" required="required" placeholder="Номер телефону">
+					<input type="submit" value="ВІдправити" class="site-button site-button--full">
+				</form>
+
+				<div class="card-form__description">
+					<p class="card-form__text">
+						Залиште заявку або телефонуйте за номером
+						<a href="tel:+380991112233" class="card-form__link--black">(099)111 22 33</a>
+						, і наш менеджер звяжеться з вами для
+						кваліфікованої консультації.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
