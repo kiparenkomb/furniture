@@ -1,0 +1,116 @@
+.slider-block {
+	&__item {
+		position: relative;
+		min-height: 100vh;
+		z-index: 2;
+		padding: 0 0 15px;
+		@media only screen and (min-width: 1024px) {
+			padding: 0 0 150px;
+
+		}
+	}
+	&__description {
+		z-index: 1;
+    	position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		padding: 100px 5px;
+		background-color: rgb(255, 255, 255, 0.7);
+		max-width: 462px;
+		border-left: 15px solid #44C697;
+		@media only screen and (min-width: 1024px) {
+			background-color: #ffffff;
+		}
+	}
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.sl-desc {
+	&__sub-title {
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 100%;
+		margin-bottom: 50px;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 125%;
+		margin-bottom: 10px;
+	}
+	&__text {
+		font-size: 36px;
+		line-height: 125%;
+		margin-bottom: 30px;
+	}
+	&__button {
+		margin-bottom: 50px;
+	}
+}
+
+.slider-nav {
+	&__point {
+		margin-bottom: 5px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 125%;
+		span {
+			font-size: 36px;
+		}
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		& > *:not(:last-child) {
+			margin: 0 8px 0 0;
+		}
+		.arrow {
+			position: relative;
+			height: 30px;
+			width: 30px;
+			background-color: #ffffff;
+			border: 1px solid #1E2E36;
+			border-radius: 50%;
+			transition: all ease-out 240ms;
+			&::before, 
+			&::after {
+				content: '';
+
+				border-right: 2px solid;
+				display: block;
+				height: 8px;
+				margin-top: -6px;
+				position: absolute;
+				transform: rotate(135deg);
+				right: 12px;
+				top: 50%;
+				width: 0;
+			}
+			&::after {
+				margin-top: -1px;
+				transform: rotate(45deg);
+			}
+			&-left{
+				transform:rotate(180deg);
+			}
+			&:hover,
+			&:focus {
+				background-color: #1E2E36;
+				&::after,
+				&::before {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
